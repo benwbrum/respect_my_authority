@@ -1,3 +1,11 @@
+GIT
+  remote: git@github.com:cfitz/ruby-dpla.git
+  revision: e5be1bae4d12e14f0c9268705669f39c7b9d3ab5
+  specs:
+    ruby-dpla (0.0.1)
+      activesupport
+      httparty (>= 0.9.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -27,6 +35,7 @@ GEM
       tzinfo (~> 0.3.37)
     arel (4.0.2)
     builder (3.1.4)
+    coderay (1.1.0)
     coffee-rails (4.0.1)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0, < 5.0)
@@ -37,6 +46,9 @@ GEM
     erubis (2.7.0)
     execjs (2.0.2)
     hike (1.2.3)
+    httparty (0.13.1)
+      json (~> 1.8)
+      multi_xml (>= 0.5.2)
     i18n (0.6.9)
     jbuilder (1.5.3)
       activesupport (>= 3.0.0)
@@ -45,13 +57,20 @@ GEM
       railties (>= 3.0, < 5.0)
       thor (>= 0.14, < 2.0)
     json (1.8.1)
+    libv8 (3.16.14.3)
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
+    method_source (0.8.2)
     mime-types (1.25.1)
     minitest (4.7.5)
     multi_json (1.9.2)
+    multi_xml (0.5.5)
     polyglot (0.3.4)
+    pry (0.9.12.6)
+      coderay (~> 1.0)
+      method_source (~> 0.8)
+      slop (~> 3.4)
     rack (1.5.2)
     rack-test (0.6.2)
       rack (>= 1.0)
@@ -71,6 +90,7 @@ GEM
     rake (10.3.1)
     rdoc (4.1.1)
       json (~> 1.4)
+    ref (1.0.5)
     sass (3.2.19)
     sass-rails (4.0.3)
       railties (>= 4.0.0, < 5.0)
@@ -80,6 +100,7 @@ GEM
     sdoc (0.4.0)
       json (~> 1.8)
       rdoc (~> 4.0, < 5.0)
+    slop (3.5.0)
     sprockets (2.11.0)
       hike (~> 1.2)
       multi_json (~> 1.0)
@@ -90,6 +111,9 @@ GEM
       activesupport (>= 3.0)
       sprockets (~> 2.8)
     sqlite3 (1.3.9)
+    therubyracer (0.12.0)
+      libv8 (~> 3.16.14.0)
+      ref
     thor (0.19.1)
     thread_safe (0.3.3)
     tilt (1.4.1)
@@ -110,9 +134,12 @@ DEPENDENCIES
   coffee-rails (~> 4.0.0)
   jbuilder (~> 1.2)
   jquery-rails
+  pry
   rails (= 4.0.0)
+  ruby-dpla!
   sass-rails (~> 4.0.0)
   sdoc
   sqlite3
+  therubyracer
   turbolinks
   uglifier (>= 1.3.0)
