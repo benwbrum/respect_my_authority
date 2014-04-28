@@ -12,11 +12,50 @@
   <strong>Q:</strong>
   <%= @analysis.q %>
   <br />
+<!-- 
   <strong>Status:</strong>
   <%= @analysis.status %>
   <br />
+-->
   <strong>Item Count:</strong>
   <%= @analysis.result_count %>
+  <br />
+  <%= link_to("View in DPLA", "http://dp.la/search?partner[]=#{@analysis.data_provider}&q=#{@analysis.q}") %>
+
+	<%= button_to("Search DPLA", :action => :fetch_dpla, :id => @analysis.id)%>
+	<%= button_to("Fetch LOC Headings", :action => :fetch_loc, :id => @analysis.id)%>
+  
+  
+  <h1>Listing subjects</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th># Items</th>
+      <th>LOC?</th>
+      <th>Use As?</th>
+      <th>Url</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @analysis.subjects.each do |subject| %>
+      <tr>
+        <td><%= subject.name %></td>
+        <td><%= subject.items %></td>
+        <td><%= subject.has_loc_sh %></td>
+        <td><%= subject.loc_sh_alias %></td>
+        <td><%= subject.loc_sh_url %></td>
+     </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Subject', new_subject_path %>
+
   
 </p>
 

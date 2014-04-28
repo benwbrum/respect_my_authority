@@ -12,6 +12,18 @@ class AnalysesController < ApplicationController
   def show
   end
 
+  def fetch_dpla
+    @analysis = Analysis.find(params[:id])    
+    @analysis.fetch_dpla
+    redirect_to @analysis
+  end
+
+  def fetch_loc
+    @analysis = Analysis.find(params[:id])    
+    @analysis.fetch_loc
+    redirect_to @analysis
+  end
+
   # GET /analyses/new
   def new
     @analysis = Analysis.new

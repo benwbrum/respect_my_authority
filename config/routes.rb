@@ -2,6 +2,8 @@ RespectMyAuthority::Application.routes.draw do
   resources :subjects
 
   resources :analyses
+  post 'analyses/:id/fetch_dpla(.:format)', :to => 'analyses#fetch_dpla'
+  post 'analyses/:id/fetch_loc(.:format)', :to => 'analyses#fetch_loc'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
