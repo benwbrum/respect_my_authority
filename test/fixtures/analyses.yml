@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  data_provider: MyString
+  subject: MyString
+  q: MyString
+  status: MyString
+  result_count: 1
+
+two:
+  data_provider: MyString
+  subject: MyString
+  q: MyString
+  status: MyString
+  result_count: 1

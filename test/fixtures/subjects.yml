@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  items: 1
+  has_loc_sh: false
+  loc_sh_alias: false
+  loc_sh_url: MyString
+  analysis_id: 
+
+two:
+  name: MyString
+  items: 1
+  has_loc_sh: false
+  loc_sh_alias: false
+  loc_sh_url: MyString
+  analysis_id: 

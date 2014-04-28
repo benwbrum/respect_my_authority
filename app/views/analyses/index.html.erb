@@ -1,0 +1,35 @@
+<h1>Analyze DPLA Subjects</h1>
+
+<p>Analyze DPLA subject data against LOC subject headings</p>
+
+
+<p><b><%= link_to 'Start a New Analysis', new_analysis_path %></b></p>
+
+<h2>Analyses</h2>
+<table border="1">
+  <thead>
+    <tr>
+      <th>Data Provider</th>
+      <th>Subject</th>
+      <th>Q String</th>
+      <th>Status</th>
+      <th>Item Count</th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @analyses.each do |analysis| %>
+      <tr>
+        <td><%= analysis.data_provider %></td>
+        <td><%= analysis.subject %></td>
+        <td><%= analysis.q %></td>
+        <td><%= analysis.status %></td>
+        <td><%= analysis.result_count %></td>
+        <td><%= link_to 'Show', analysis %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>

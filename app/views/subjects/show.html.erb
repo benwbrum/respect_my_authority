@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @subject.name %>
+</p>
+
+<p>
+  <strong>Items:</strong>
+  <%= @subject.items %>
+</p>
+
+<p>
+  <strong>Has loc sh:</strong>
+  <%= @subject.has_loc_sh %>
+</p>
+
+<p>
+  <strong>Loc sh alias:</strong>
+  <%= @subject.loc_sh_alias %>
+</p>
+
+<p>
+  <strong>Loc sh url:</strong>
+  <%= @subject.loc_sh_url %>
+</p>
+
+<p>
+  <strong>Analysis:</strong>
+  <%= @subject.analysis %>
+</p>
+
+<%= link_to 'Edit', edit_subject_path(@subject) %> |
+<%= link_to 'Back', subjects_path %>
